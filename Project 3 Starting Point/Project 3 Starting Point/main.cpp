@@ -4,6 +4,27 @@
 #include "Guild.h"
 using namespace std;
 
+
+//Clear Screen 
+#ifdef __cplusplus__
+#include <iostream>
+#include <string>
+
+void ClearScreen()
+{
+	cout << string(100, '\n');
+}
+#else
+#include <stdio.h>
+void ClearScreen()
+{
+	int n;
+	for (n = 0; n < 10; n++)
+		printf("\n\n\n\n\n\n\n\n\n\n");
+}
+
+#endif
+
 void DisplayGuildInfo(const shared_ptr<Guild> guild);
 void AddAdventurer(const shared_ptr<Guild> guild);
 void Attack(const shared_ptr<Guild> guild);
@@ -18,7 +39,7 @@ int main()
 	int choice = -1;
 	while (choice != 0) 
 	{
-		system("cls");
+		ClearScreen();
 		cout << "Now Managing " << guild->GetName() << endl << "****************************" << endl;
 		cout << "1) Display Guild Information" << endl;
 		cout << "2) Add An Adventurer" << endl;
@@ -38,20 +59,20 @@ int main()
 
 void DisplayGuildInfo(const shared_ptr<Guild> guild)
 {
-	system("cls");
+	ClearScreen();
 	cout << guild->GetInfo();
 	system("pause");
 }
 
 void AddAdventurer(const shared_ptr<Guild> guild) 
 {
-	system("cls");
+	ClearScreen();
 
 	cout << "Enter a name for your adventurer: ";
 	string name;
 	cin >> name;
 
-	system("cls");
+	ClearScreen();
 
 	cout << "What type of adventurer would you like to add?" << endl;
 	cout << "1) Mage" << endl;
@@ -74,7 +95,7 @@ void AddAdventurer(const shared_ptr<Guild> guild)
 
 void Attack(const shared_ptr<Guild> guild)
 {
-	system("cls");
+	ClearScreen();
 
 	cout << "1) Attack with mages" << endl;
 	cout << "2) Attack with rangers" << endl;

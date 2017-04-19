@@ -110,6 +110,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="Adventurers.cpp" />
     <ClCompile Include="Guild.cpp" />
     <ClCompile Include="Mage.cpp" />
     <ClCompile Include="main.cpp" />
@@ -118,6 +119,7 @@
     <ClCompile Include="Warrior.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Adventurers.h" />
     <ClInclude Include="Guild.h" />
     <ClInclude Include="Mage.h" />
     <ClInclude Include="Paladin.h" />
