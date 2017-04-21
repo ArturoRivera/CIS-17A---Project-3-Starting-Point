@@ -5,7 +5,8 @@
 using namespace std;
 
 
-//Clear Screen 
+//Undo comments if using Xcode and replace 'system("cls")' with ClearScreen()
+/*
 #ifdef __cplusplus__
 #include <iostream>
 #include <string>
@@ -24,7 +25,7 @@ void ClearScreen()
 }
 
 #endif
-
+*/
 void DisplayGuildInfo(const shared_ptr<Guild> guild);
 void AddAdventurer(const shared_ptr<Guild> guild);
 void Attack(const shared_ptr<Guild> guild);
@@ -39,7 +40,7 @@ int main()
 	int choice = -1;
 	while (choice != 0) 
 	{
-		ClearScreen();
+		system("clear");
 		cout << "Now Managing " << guild->GetName() << endl << "****************************" << endl;
 		cout << "1) Display Guild Information" << endl;
 		cout << "2) Add An Adventurer" << endl;
@@ -59,20 +60,20 @@ int main()
 
 void DisplayGuildInfo(const shared_ptr<Guild> guild)
 {
-	ClearScreen();
+    system("clear");
 	cout << guild->GetInfo();
 	system("pause");
 }
 
 void AddAdventurer(const shared_ptr<Guild> guild) 
 {
-	ClearScreen();
+    system("clear");
 
 	cout << "Enter a name for your adventurer: ";
 	string name;
 	cin >> name;
 
-	ClearScreen();
+    system("clear");
 
 	cout << "What type of adventurer would you like to add?" << endl;
 	cout << "1) Mage" << endl;
@@ -95,7 +96,7 @@ void AddAdventurer(const shared_ptr<Guild> guild)
 
 void Attack(const shared_ptr<Guild> guild)
 {
-	ClearScreen();
+    system("clear");
 
     cout << "1) Attack with everything!" << endl;
 	cout << "2) Attack with mages" << endl;
