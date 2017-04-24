@@ -40,7 +40,7 @@ int main()
 	int choice = -1;
 	while (choice != 0) 
 	{
-		system("clear");
+		system("cls");
 		cout << "Now Managing " << guild->GetName() << endl << "****************************" << endl;
 		cout << "1) Display Guild Information" << endl;
 		cout << "2) Add An Adventurer" << endl;
@@ -60,20 +60,20 @@ int main()
 
 void DisplayGuildInfo(const shared_ptr<Guild> guild)
 {
-    system("clear");
+    system("cls");
 	cout << guild->GetInfo();
 	system("pause");
 }
 
 void AddAdventurer(const shared_ptr<Guild> guild) 
 {
-    system("clear");
+    system("cls");
 
 	cout << "Enter a name for your adventurer: ";
 	string name;
 	cin >> name;
 
-    system("clear");
+    system("cls");
 
 	cout << "What type of adventurer would you like to add?" << endl;
 	cout << "1) Mage" << endl;
@@ -96,7 +96,7 @@ void AddAdventurer(const shared_ptr<Guild> guild)
 
 void Attack(const shared_ptr<Guild> guild)
 {
-    system("clear");
+    system("cls");
 
     cout << "1) Attack with everything!" << endl;
 	cout << "2) Attack with mages" << endl;
